@@ -1,0 +1,37 @@
+<?php require 'valid/validenter.php';?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Enter</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+	<section class="form_header">
+		<?php
+			if ($_COOKIE['user'] == ''):
+		?>
+		<div class="form_cont">
+			<h4 class="titles">Enter</h4>
+				<div class="conteiner_form">
+		        	<form action="valid/validenter.php" method="post">
+			        	<label>Login</label>
+			        		<input type="text" name="login" placeholder="Login" class="input" value ="">
+			        	<label>Password</label>
+			        		<input type="password" name="pass" placeholder="Password" class="input" value ="">
+			        	<input type="submit" name="submit" value="Enter" class="submit_form">
+		        	</form>
+		        </div>
+		</div>
+		<?php else: ?>
+			<div class="titles" style="padding-top: 100px">
+			<h2 style="padding: 25px ; margin: 0;">Hello<br> <?php echo $_COOKIE['user']; ?> <br>Click <a href="exit.php">here</a> to exit.</h2>		
+			</div>
+		<?php endif; ?>
+	        <div class="button"><a href="index.php" class="button_form">BACK</a></div>       
+	</section>
+	<script src="js/jquery-3.5.0.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
