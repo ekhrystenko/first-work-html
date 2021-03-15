@@ -6,7 +6,7 @@
 }
 .fon{
 	background: url(../img/img2.jpg) no-repeat center top / cover;
-	transition-duration: 1s;
+	transition-duration: 2s;
 }
 .hide{
 	opacity: 0;
